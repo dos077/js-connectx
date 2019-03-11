@@ -1,0 +1,41 @@
+//grid mixins
+
+@mixin grid($rows: 0, $cols: 0) {
+  display: grid;
+  @if $rows > 0 {
+    grid-template-rows: repeat($rows, 1fr);
+    @for $i from 1 through $rows {
+     .row-#{$i} {
+      grid-row: span #{$i};
+     } 
+    }
+  }
+  @if $cols > 0 {
+    grid-template-columns: repeat($cols, 1fr);
+    @for $i from 1 through $cols {
+     .col-#{$i} {
+      grid-column: span #{$i};
+     } 
+    }
+  }
+}
+
+//media queries
+
+@mixin small() {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @media only screen and (min-width: 577px) {
+    @content;
+  }
+}
+
+@mixin large() {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
