@@ -10,9 +10,9 @@
     <div id="game-container">
       <header id="main">
         <nav>
-          <button onclick="round.newGame(3,3,3)">Tic Tac Toe</button>
-          <button onclick="round.newGame(4,4,4)">Quarto</button>
-          <button onclick="round.newGame(5,15,15)">Gomoku</button>
+          <button class="btn select" onclick="round.newGame(3,3,3);selectBtn(this)">Tic Tac Toe</button>
+          <button class="btn" onclick="round.newGame(4,4,4);selectBtn(this)">Quarto</button>
+          <button class="btn" onclick="round.newGame(5,15,15);selectBtn(this)">Gomoku</button>
         </nav>
       </header>
       <article id="board" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">

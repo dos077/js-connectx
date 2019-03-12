@@ -132,3 +132,10 @@ const GameController = () => {
   return { newGame, move }
 }
 
+const selectBtn = (btn) => {
+  let buttons = document.querySelectorAll('.btn');
+  buttons.forEach( function(button) {
+    button.classList.remove('select');
+  });
+  btn.classList.add('select');
+}
