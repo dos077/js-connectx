@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <title>Connect X</title>
     <link rel="stylesheet" type="text/css" href="css/connect.css">
+    <script src="js/connect.js"></script>
   </head>
   <body>
     <div id="game-container">
+      <header id="main">
+        <nav>
+          <button onclick="round.newGame(3,3,3)">Tic Tac Toe</button>
+          <button onclick="round.newGame(4,4,4)">Quarto</button>
+          <button onclick="round.newGame(5,15,15)">Gomoku</button>
+        </nav>
+      </header>
       <article id="board" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);">
         <div class="square p2"></div>
         <div class="square"></div>
@@ -19,6 +27,10 @@
         <div class="square"></div>
       </article>
     </div>
+    <script>
+      var round = GameController();
+      round.newGame();
+    </script>
   </body>
 
 </html>

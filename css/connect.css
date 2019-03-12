@@ -40,24 +40,27 @@ table {
 input {
   background-color: rgba(255, 255, 255, 0); }
 
+body {
+  font-size: 2vmin; }
+
 #game-container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  height: 100%;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 #board {
   position: relative;
   display: grid;
+  width: 90vmin;
   background-color: #ccc;
   border: 1px #aaa solid; }
   #board .square {
     position: relative;
     overflow: hidden;
-    min-width: 100px;
-    max-width: 300px;
     padding-top: 100%;
     height: 0;
     border: 1px #aaa solid; }
@@ -70,7 +73,9 @@ input {
       width: 100%;
       height: 0;
       padding-top: 100%;
-      text-align: center;
+      text-align: center; }
+    #board .square.empty:hover::after {
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4) inset;
       content: ''; }
     #board .square.p1::after {
       background-color: black;
@@ -82,5 +87,57 @@ input {
       color: white;
       clip-path: circle(50% at 50% 50%);
       content: 'O'; }
+  #board #notice {
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 2.5em;
+    background-color: rgba(0, 0, 0, 0.7); }
+
+header#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center; }
+  header#main button {
+    display: inline-block;
+    height: 3.2em;
+    padding: .8em;
+    margin: 1em;
+    font-size: 100%;
+    color: white;
+    background-color: #4285f4;
+    border: 1px #aaa solid;
+    border-radius: 1em;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4); }
+    header#main button:hover {
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.6); }
+  @media screen and (max-aspect-ratio: 1 / 1) {
+    header#main {
+      width: 100%;
+      height: 10vmin;
+      margin-bottom: 2em; }
+      header#main nav {
+        width: auto;
+        height: 3.2em;
+        margin: 0 auto; } }
+  @media screen and (min-aspect-ratio: 1 / 1) {
+    header#main {
+      min-width: 10vmin;
+      height: 100%;
+      max-height: 750px;
+      margin-right: 2em; }
+      header#main nav {
+        text-align: right;
+        width: 10em;
+        height: auto;
+        margin: auto 0; } }
 
 /*# sourceMappingURL=connect.css.map */
