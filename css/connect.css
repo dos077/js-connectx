@@ -58,7 +58,7 @@ body {
   align-content: center;
   justify-content: center;
   padding: 10px;
-  margin: 5vmin auto;
+  margin: 5vmin;
   background-color: #f8f3ed;
   border: 2px #4a361c solid;
   border-radius: 10px; }
@@ -132,7 +132,7 @@ header#main {
       border-bottom: 0.2em #dcc3a3 solid; }
   @media screen and (max-aspect-ratio: 1) {
     header#main {
-      width: 100%;
+      width: 20em;
       height: 10vmin;
       margin-bottom: 2em; }
       header#main nav {
@@ -147,7 +147,7 @@ header#main {
       margin-right: 2em; }
       header#main nav {
         text-align: right;
-        width: 10em;
+        width: 8em;
         height: auto;
         margin: auto 0; } }
 

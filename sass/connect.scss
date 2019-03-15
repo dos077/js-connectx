@@ -28,7 +28,7 @@ body {
   align-content: center;
   justify-content: center;
   padding: 10px;
-  margin: 5vmin auto;
+  margin: 5vmin;
   background-color: $prime-bg;
   border: 2px $prime-border solid;
   border-radius: 10px;
@@ -111,7 +111,7 @@ header#main{
   }
   
   @media screen and (max-aspect-ratio: 1){
-    width: 100%;
+    width: 20em;
     height: 10vmin;
     margin-bottom: 2em;
     nav {
